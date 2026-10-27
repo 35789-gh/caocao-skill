@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.log
+draft/
+scripts/vis-tools/node_modules/
+templates/*.docx
+templates/*.pdf

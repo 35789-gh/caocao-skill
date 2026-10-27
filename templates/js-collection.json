@@ -1,0 +1,41 @@
+{
+  "files_scanned": 1,
+  "obfuscation": false,
+  "deobfuscated": false,
+  "key_binding": false,
+  "controllable_ledger": false,
+  "interface_count": 2,
+  "ledger": [
+    {
+      "path": "/admin-api/system/user/page",
+      "source": "src/api/system/user.js",
+      "_source_note": "批四十弱核：条目来源锚（提取自哪个 JS 文件或页面 URL）——ledger ≥50% 条目带 source 否则 close 记 note（整本手写嫌疑）",
+      "params": [
+        {"name": "pageNo", "in": "query", "controllable": "proven"},
+        {"name": "pageSize", "in": "query", "controllable": "proven"}
+      ]
+    },
+    {
+      "path": "/admin-api/system/user/{id}",
+      "source": "src/api/system/user.js",
+      "params": [{"name": "id", "in": "path", "controllable": "proven"}]
+    }
+  ],
+  "deobf": {
+    "report": "01-guo-jia/deobf-report.json",
+    "obfuscation_from_report": true,
+    "tool_used": "fallback",
+    "modules_recovered": 37,
+    "strings_restored": 1240,
+    "unresolved_left": 1
+  },
+  "runtime_capture": {
+    "file": "01-guo-jia/runtime-capture.json",
+    "captured_interfaces": 43,
+    "static_missing_backfilled": 2,
+    "unresolved_upgraded": 1,
+    "static_only_marked": 5,
+    "diffset_conclusion": "运行态比静态清单多出 /api/upload/chunk（解析漏了，已回补 ledger）；unresolved 的 /api/sys/menu 参数在运行态抓到明文，升级 proven；5 条静态有而运行态无的接口已标注（可能死代码）。"
+  },
+  "notes": "files_scanned 必须真扫过 JS。有混淆时 obfuscation=true（此字段是混淆判定主来源，gates 据它判定是否查三份账——三份账本轮人工把关，闸脚本机械查的仍是本账 deobfuscated/key_binding/controllable_ledger 三键），且后三项必须 true。空清单不算完成。in 可选：写了就必须是 query|body|path|header，写错闸 fail；老账 params 字符串数组 + 整行 controllable 仍合法，缺 in 不 fail。in 怎么定：axios/fetch 的 params:/URLSearchParams → query；data:/body → body；路由 :id 或 path 段 → path；headers: 设置 → header。同一接口多出处按参数逐条写。混淆场先跑 scripts/js_unpack.py 落 deobf-report/key-bindings，本账加 deobf 键回指（结构与出处=js_unpack.py 本体；deobf.unresolved_left = deobf-report 里 unresolved_by_type 计数的汇总）；unresolved_left>0 时加 runtime_capture 键（diffset_conclusion 差集结论必写）；明文 src 场与老账无这两键不 fail。"
+}

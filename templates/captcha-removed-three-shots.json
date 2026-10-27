@@ -1,0 +1,14 @@
+{
+  "_comment": "captcha-removed-three-shots.json 模板——郭嘉去干净回执照抄本结构。常规产品三枪全 pass + challenge_path + evidence≥2（登录差分+挑战接口）。无验证码产品认 no_captcha_product 形态（见第二段）。",
+  "login_without_captcha": "pass",
+  "challenge_no_image": "pass",
+  "page_no_widget": "pass",
+  "challenge_path": "/admin-api/system/captcha/get",
+  "evidence": [
+    "01-guo-jia/evidence/removed-login-no-captcha.txt",
+    "01-guo-jia/evidence/removed-captcha-get.txt"
+  ],
+  "_no_captcha_product_form": "无验证码产品（native 本免码/源码无挑战接口/页面无控件）三枪客观不存在——认未改对照形态，禁假造差分凑三枪：login_without_captcha/challenge_no_image/page_no_widget 全填 not_applicable、no_captcha_product=true、product_basis 写 ≥10 字依据（源码/配置里无验证码模块的 file:line 或配置项）、evidence ≥1 份未改对照回包原件（removed 登录成功回包）。闸认此形态放行，缺 product_basis 或 evidence 仍 fail。",
+  "no_captcha_product": false,
+  "product_basis": ""
+}

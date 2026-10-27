@@ -1,0 +1,18 @@
+{
+  "_说明": "运行态绑定材料账（批三十九，深挖条款 30）：郭嘉每次起服/重启服务时逐 component 落账，close 三层机械核——①main_artifact 盘上重算 sha256 必须等于 main_sha256（假账在此炸）；②main_sha256 必须命中开局 run/material-manifest.json 的 files[].sha256，或走 built_from（构建命令非空+source_manifest_sha256=当前材料清单哈希）——仿写/魔改迷你服务的工件不在清单=当场 fail；③端口仍监听时 netstat 查到的 PID 必须与账一致（验证期间换服务在此炸）；端口无监听=合规关停记注不拦。main_sha256 用 py -3 scripts/material_hash.py --file <工件路径> 算，禁手抄。docker/解压 war 场：main_artifact 指构建产物路径（镜像里的主 jar 构建出来那份），built_from.command 记 docker build/mvn package 原命令。合法重启服务须更新 pid 并保持工件哈希不变。",
+  "components": [
+    {
+      "name": "backend",
+      "port": 48080,
+      "pid": 12345,
+      "main_artifact": "lib/xxx/target/xxx-admin.jar",
+      "main_sha256": "<material_hash.py 算出的 64 位哈希，禁手抄>",
+      "start_command": "java -jar xxx-admin.jar --server.port=48080",
+      "built_from": {
+        "_说明": "可选：工件由本场源码构建（不在材料清单直命中）时必填",
+        "command": "mvn -pl xxx-admin -am package -DskipTests",
+        "source_manifest_sha256": "<构建时 run/material-manifest.json 的整体 sha256>"
+      }
+    }
+  ]
+}

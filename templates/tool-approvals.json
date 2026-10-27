@@ -1,0 +1,29 @@
+{
+  "kind": "tool_approvals",
+  "project": "<project_id>",
+  "version_label": "<version_or_build_id>",
+  "approvals": [
+    {
+      "role": "01-guo-jia",
+      "kind": "tool",
+      "tool_path": "01-guo-jia/tmp/tools/<script>.py",
+      "purpose": "干什么用（采集/解析/比对/复核）",
+      "applies_to": "<project>@<version>",
+      "verdict": "approved",
+      "decided_by": "02-cao-cao",
+      "decided_at": "",
+      "review_note": "曹操复核：方案可行性、漏报误报风险、产物互证方式；工具不够用的理由成不成立；批前核实没编造（抽查声称读过的代码对照）"
+    },
+    {
+      "role": "01-guo-jia",
+      "kind": "exemption",
+      "request_path": "01-guo-jia/tool-coverage-assessment.md",
+      "reason": "哪个面、包内工具覆盖不到什么",
+      "evidence": ["看了哪些文件/行/类名（指针）"],
+      "verdict": "approved",
+      "decided_by": "02-cao-cao",
+      "decided_at": "",
+      "review_note": "曹操先读证据验证（抽查声称看过的文件对照原文件）再核结论合理性；结论站不住 → 驳回必须造；豁免只对本项目本版本有效"
+    }
+  ]
+}

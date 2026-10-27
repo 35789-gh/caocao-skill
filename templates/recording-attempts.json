@@ -1,0 +1,11 @@
+{
+  "by_chain": {
+    "<id>": [
+      {"n": 1, "chain_id": "<id>", "when": "ISO-8601", "tool": "host/browser", "error": "timeout|black|no_tool"},
+      {"n": 2, "chain_id": "<id>", "when": "ISO-8601", "tool": "host/browser", "error": "timeout"},
+      {"n": 3, "chain_id": "<id>", "when": "ISO-8601", "tool": "host/browser", "error": "black"},
+      {"n": 4, "chain_id": "<id>", "when": "ISO-8601", "tool": "host/browser", "error": "no_tool"},
+      {"n": 5, "chain_id": "<id>", "when": "ISO-8601", "tool": "host/browser", "error": "timeout"}
+    ]
+  }
+}

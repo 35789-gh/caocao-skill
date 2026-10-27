@@ -1,0 +1,12 @@
+{
+  "_说明": "起服失败记录件（RF-IMG-19 出口，批五十三 R5-04）：材料/源码在场（local_source/source_and_website 或信封登记 material_source_path）的场，确实起不了服时落本件到 run/service-start-failure.json——闸校验三键（reason ≥20 字且不同字符 ≥6 / attempted_commands ≥2 条真实尝试过的命令 / evidence ≥1 指向存在的实件如启动日志），合格降 note「service_start_failed(交曹操裁)」放行 close，不合格仍拦。禁伪造：attempted_commands 必须是真实执行过的命令（evidence 里要有对应痕迹），曹操抽验发现编造按 H-21 伪造论处。",
+  "reason": "<≥20 字且不同字符 ≥6：为什么起不来（缺什么依赖/什么报错，写具体）>",
+  "attempted_commands": [
+    "<真实尝试过的命令 1，如 mvn -o package -pl web>",
+    "<真实尝试过的命令 2，如 java -jar target/app.jar>"
+  ],
+  "evidence": [
+    "<启动尝试实件指针，如 01-guo-jia/startup-attempt.log>"
+  ],
+  "declared_at": "<落件时间>"
+}

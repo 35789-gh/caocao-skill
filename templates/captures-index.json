@@ -1,0 +1,13 @@
+{
+  "ui": "required",
+  "address_bar": true,
+  "address_bar_urls": {
+    "native_login": "http://127.0.0.1:PORT/login",
+    "removed_login": "http://127.0.0.1:PORT/login",
+    "removed_admin": "http://127.0.0.1:PORT/"
+  },
+  "native_login": "captures/native-login.png",
+  "removed_login": "captures/removed-login.png",
+  "removed_admin": "captures/removed-admin.png",
+  "four_step_frontend_search": null
+}

@@ -1,0 +1,14 @@
+{
+  "kind": "methodology_gap",
+  "candidate_only": true,
+  "language": "",
+  "framework": "",
+  "packed_methodology": "none",
+  "searched": "",
+  "reasoned": "",
+  "entry_ledger": "",
+  "chain_ledger": "",
+  "counterexample_ledger": "",
+  "coverage_gap": "",
+  "notes": "可选笔记，闸不因缺这份 fail。不是第六个硬账，也不是计划表 coverage_gap。本包长文只装箱 PHP/Java；其它栈 walker 短规则继续扫。禁止停工等文。有这份也不能顶 keyword/JS/自动链/sink/CVE，也不能写成 verified。"
+}

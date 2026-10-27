@@ -1,0 +1,10 @@
+{
+  "_comment": "not-needed.json（角色不适用留痕）照抄件。警告写在 _comment 里勿复制进 reason：曹冲撞过滤、曹仁/刘晔遇第三方版本、司马懿遇本场登录页/API/swagger 时禁止用本文件顶作业；reason 禁写源码分支名或「无待测目标」类措辞（SIMA_FAKE_NN 禁词，照抄旧版示例会撞闸——批五十八 D 措辞修正）。reason 须写本角色本场为何确实无作业（≥1 条具体事实指针）。",
+  "kind": "not_needed_marker",
+  "role": "<role>",
+  "decision": "not_needed",
+  "run_id": "<run_id>",
+  "target_identity": "<target>",
+  "snapshot_id": "<snap>",
+  "reason": "<本角色本场无作业的具体事实：如 郭嘉 本场开局清单仅 1 站且已由主会话直采，无分片需求，见 test-session.json run_id 对照>"
+}

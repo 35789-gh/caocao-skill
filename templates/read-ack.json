@@ -1,0 +1,7 @@
+{
+  "_comment": "现身三件之一（主会话写）：角色读卡回执落 run/agents/<role>-read-ack.json——文件名是连字符（dispatch_check_lite 实码口径，写下划线会 missing fail）。lite 核 agent_id 与 dispatch/launch 一致。",
+  "role": "<role>",
+  "agent_id": "agent_<uuid>",
+  "read_card_at": "<读卡时间 ISO>",
+  "card": "roles/<角色>.md"
+}

@@ -1,0 +1,18 @@
+{
+  "scans": {
+    "mybatis_dollar": {"searched": "mapper xml ${deviceId}/${productId}/${field.field}", "hits": 1},
+    "class_for_name": {"searched": "Class.forName(request)", "hits": 0},
+    "exec": {"searched": "Runtime.exec / ProcessBuilder", "hits": 0},
+    "expression": {"searched": "SpEL / ScriptEngine / user template", "hits": 0},
+    "fastjson_user_entry": {"searched": "Fastjson autoType HTTP entry", "hits": 0}
+  },
+  "items": [
+    {
+      "sink": "IotDeviceMessageMapper.xml device_message_${deviceId}",
+      "module": "demo-cloud-module-iot + TDengine",
+      "runtime": "started",
+      "listen": "http://127.0.0.1:<iot-port>/actuator/health",
+      "evidence": ["01-guo-jia/evidence/iot-listen.txt"]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "blackbox-phases",
+  "role": "sima-yi",
+  "run_id": "<run_id>",
+  "phase1_native": "done",
+  "phase1_evidence": ["09-si-ma-yi/sima-yi-book.md"],
+  "phase2_captcha_removed": "done",
+  "phase2_evidence": ["09-si-ma-yi/phase2-removed-observations.json"],
+  "note": "removed 已在就必须打第二段。禁止 phase2=not_applicable 且 captcha_removed 已听口。排队 LOCK-Q / 等画面 / 回执未齐 不能当 blocked。网站场 phase2 可 not_applicable。static_only 才允许整份 not-needed。"
+}

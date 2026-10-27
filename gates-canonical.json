@@ -1,0 +1,28 @@
+{
+  "generated_at": "2026-10-27T10:36:22+08:00",
+  "package": "D:\\曹操",
+  "files": {
+    "hard_gate.py": "731e0310b8904be6091a6f23e357a55a7aa5cf40275fb56f974e11844f8896da",
+    "dispatch_check_lite.py": "aee1a955ede43d065ee8620b21ab8dadf35ee131a66108bff41a02f87580618e",
+    "vision_gate.py": "09771e46f2f4e7b5dfb99f5904de86420eac5550d92e5d20f90d0ac0bd13d3ce",
+    "vision_review.py": "626be550f1b701137a13351ff5814b22722efbf319288fdb4121f23e8374e64d",
+    "check_finding.py": "81f58afbffff70ee666cf5e61e1808384f950a1914e96b6cbb026274a2e48692",
+    "auto_chain_scan.py": "bd553073d094b62d0b7a4e0d28957dfa8b32d451741a9b766126ea549c997ed8",
+    "hybrid_discovery.py": "7cbbe730acddd2bb9093b519f7266956b6da480be59fb1874eb987cc14a36a52",
+    "js_unpack.py": "d63546d5f780eb422fe09ceeb53994de06fe3337a4b24832293196f379352ccd",
+    "material_hash.py": "519fa3c559e29473570e7868eab6f20aa22a37b38d9f6e914788ba70b14acde0",
+    "make_canonical.py": "da0defc047679bbdb8aa13eeb19ccba003f834d32786f74bf839a0f62af5bac9",
+    "vis-tools/cmdsend-any.ps1": "cdd1705a30091410ae94ccdf39a68ea813535b31b418d65734fb0dcb4c2aca97",
+    "vis-tools/snapchrome.ps1": "6a25c0891911137b2d2b1a0bed1b2bd34e7d4eb54f54fddb55651fa23b855d42",
+    "vis-tools/snapwin.ps1": "41ddeeca322427d6272399570c9889696d62a9c506b682c0c4f89e208964038a",
+    "vis-tools/snapdual.ps1": "df165234dffb222833dce92e64f53ca9ae539a5a869ddf066b471aa333f3d577",
+    "vis-tools/shotlock.py": "14a6877fa9e5fad7eaa0e98aa6bb96dc75cf15865501ce19b3d476bc7474e6c6",
+    "vis-tools/who9222.py": "392d4280bee145a808413d34c90c7913e12b04c1fccb8b816d454832b7a907c9",
+    "vis-tools/record-page.js": "5e019b19f07102af85926e83fb17fc76e697b7fa73861b31b4c860f8f1e92e72",
+    "vis-tools/drive.js": "029cf9c938074a69f71218dc1f867b24a514094d3047cb4272b0ab0a5e5b0c14",
+    "vis-tools/send-shot-gate.sh": "6451cf7b2300b45b4a47dbca17691d16ff4153d670df78b9f893c320289fde81",
+    "tools.json": "fe9fe2887112b0d2812158ccbd39e42f9332e6ad5bde55536364b111e5a8767c",
+    "credential_scan.py": "a5e41376fc83e70a48fad0ebe24f7ec9087ceb49f2de839a1e9da38832f5076d"
+  },
+  "self_note": "批三十九 canonical 根：hard_gate env/close 比对本件；模型禁写本文件（信任根纪律见 README）。用户保管义务：生成后把本文件 sha256 抄录到聊天外（纸质/手机）——同盘同权限可被改，抄录值才是绝对根。"
+}

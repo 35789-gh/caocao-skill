@@ -1,0 +1,19 @@
+{
+  "_comment": "工具集中配置。本包自包含：召回扫描、凭据外泄扫描、前端接口清单、DOCX 生成全部内置（scripts/ 下，纯标准库），无外部包依赖。startup_rules 与 rules_vuln_report_format 为可选宿主环境配置。",
+  "startup_rules": "<可选：宿主全局启动规则文件绝对路径>",
+  "rules_vuln_report_format": "<可选：本机 rules/vuln-report-format.md 绝对路径>",
+  "builtin_tools": {
+    "hybrid_discovery": "scripts/hybrid_discovery.py（源码召回：Deep 分桶 + 七条语义查询 + Deep 四句 lexical；用法：py -3 scripts/hybrid_discovery.py --root <源码根> --out 01-guo-jia/hybrid-discovery.jsonl；内置版无向量引擎，vector_first 桶自动 lexical fallback 并落 vector_key_check）",
+    "credential_scan": "scripts/credential_scan.py（凭据外泄扫描；hard_gate close 相位自动调用；也可手跑：py -3 scripts/credential_scan.py --run-root <run_root> --out run/credential-scan.json）",
+    "js_endpoint_scan": "scripts/js_endpoint_scan.py（前端 JS 接口清单素材：路径字面量/fetch/axios 调用/加密盐信号；用法：py -3 scripts/js_endpoint_scan.py --root <前端目录> --out <json>；与 js_unpack.py 分工：js_unpack 管混淆还原（candidate_only），本脚本管清单化提取，混淆场先 unpack 再 scan）",
+    "docx_report": "正式 DOCX 由分身按 H-13 用 python-docx 生成（参考 templates/_gen_sample_f6_* 样例）；本包不内置生成器，闸用标准库 zipfile 解析 DOCX 验收",
+    "auto_chain_scan": "scripts/auto_chain_scan.py（source/sink walker，五套硬账之一）",
+    "js_unpack": "scripts/js_unpack.py（前端混淆解包：sourcemap 还原/模块切分/字符串转储/key 候选）",
+    "material_hash": "scripts/material_hash.py（材料清单哈希）"
+  },
+  "optional_enhancements": {
+    "vector_recall": "自备 v7 包（07-tools/hybrid_discovery.py 向量召回版）后在 v7_root 登记路径；未登记时内置 lexical 版即满足闸要求",
+    "embedding": "secrets/embedding.env（EMBEDDING_API_KEY=...）；仅 v7 向量召回用，内置版不需要"
+  },
+  "v7_root": "<可选：v7 包根绝对路径——仅向量召回增强用；不登记不影响任何闸与硬账>"
+}

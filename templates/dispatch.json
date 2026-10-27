@@ -1,0 +1,16 @@
+{
+  "role": "<role>",
+  "agent_id": "agent_<uuid>",
+  "scope_ids": [
+    "collection"
+  ],
+  "duty_steps": [
+    "do the actual job in one short list; write drafts to disk as you go",
+    "before final reply: self-check every file in expected_artifacts exists and is complete; never end with 'will continue later' - state exactly which items are missing instead",
+    "交接纪律：换班/续跑先读本角色目录的 resume-state.json 断点交接件再干活（SKILL 深挖条款 21/三条子代理纪律之三；批四十一修正：此前误写 run/ 路径与 SKILL 不一致）"
+  ],
+  "expected_artifacts": [
+    "<role-dir>/<expected-output-file>"
+  ],
+  "credential_ref": "credential_ref:run/access/credentials-neutral.txt#web-login"
+}

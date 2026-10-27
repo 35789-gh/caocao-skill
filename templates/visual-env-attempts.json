@@ -1,0 +1,7 @@
+{
+  "_comment": "visual-env-attempts.json（环境失败账）——信封落 visual_available=false 的唯一凭证（批五十七 W2）。电脑默认有浏览器，无视觉豁免=环境真起不来：本账 attempts ≥6 条真实尝试，每条 when/tool/error 全填且 error ≥4 字写实失败原因；编造按 H-21 论处。落盘位置：run/visual-env-attempts.json。attempts 样例值勿照抄。",
+  "attempts": [
+    { "when": "2026-10-16T10:00+08:00", "tool": "playwright chromium launch", "error": "样例勿抄：Executable doesn't exist，run `playwright install` 后仍报 node 缺失" },
+    { "when": "…", "tool": "…", "error": "…" }
+  ]
+}

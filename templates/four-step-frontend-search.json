@@ -1,0 +1,6 @@
+{
+  "readme": {"searched": "ZIP README / docs ui 仓地址", "result": "miss"},
+  "official_repo": {"searched": "同品牌官方仓同版本 *-ui/*-admin", "result": "miss"},
+  "local_package": {"searched": "本机 Downloads / 本场附件同名前端包", "result": "miss"},
+  "public_repo": {"searched": "GitHub/Gitee 公开官方仓", "result": "miss"}
+}

@@ -1,0 +1,7 @@
+{
+  "_comment": "现身三件之一（主会话写）：创建角色当回合落 run/agents/<role>-launch.json。lite 只核存在性与 agent_id 形态（agent_<uuid>，与 dispatch/read-ack 一致）；内容如实记创建时点即可，不堆手续。",
+  "role": "<role>",
+  "agent_id": "agent_<uuid>",
+  "launched_at": "<创建时间 ISO>",
+  "note": "创建消息只读卡（SKILL 步 3）"
+}

@@ -1,0 +1,120 @@
+{
+  "kind": "auto_chain_scan",
+  "candidate_only": true,
+  "engine": "scripts/auto_chain_scan.py",
+  "source_root": "",
+  "files_scanned": 0,
+  "skipped_dirs": [
+    ".git",
+    "vendor",
+    "node_modules",
+    "dist",
+    "build",
+    "target"
+  ],
+  "kept_reading_dirs": [
+    "include",
+    "includes",
+    "inc",
+    "lib",
+    "library",
+    "classes",
+    "class"
+  ],
+  "scans": {
+    "php_request": {
+      "searched": "$_GET/POST/REQUEST/COOKIE/FILES（含 include/*.inc）",
+      "hits": 0
+    },
+    "php_include": {
+      "searched": "include/require $var（.inc 当 PHP，不因目录名 include 跳过）",
+      "hits": 0
+    },
+    "php_sql": {
+      "searched": "mysql_query/mysqli/pdo",
+      "hits": 0
+    },
+    "php_eval": {
+      "searched": "eval/assert/create_function",
+      "hits": 0
+    },
+    "php_unserialize": {
+      "searched": "unserialize($",
+      "hits": 0
+    },
+    "java_request": {
+      "searched": "@RequestParam/@RequestBody/@PathVariable/@RequestHeader/@CookieValue/@RequestPart/@ModelAttribute 注解或 xxx.getParameter()（任意变量名）",
+      "hits": 0
+    },
+    "java_exec": {
+      "searched": "Runtime.exec / ProcessBuilder",
+      "hits": 0
+    },
+    "mybatis_dollar": {
+      "searched": "mapper xml ${}",
+      "hits": 0
+    },
+    "py_request": {
+      "searched": "request.args/form/json / os.environ",
+      "hits": 0
+    },
+    "go_request": {
+      "searched": "URL.Query / FormValue",
+      "hits": 0
+    },
+    "js_request": {
+      "searched": "req.query/body/params",
+      "hits": 0
+    },
+    "php_sql_concat": {
+      "searched": "PHP SQL 字面量与 $var 拼接（同文件）",
+      "hits": 0
+    },
+    "py_sql_flow": {
+      "searched": "Python 函数内 request→SQL",
+      "hits": 0
+    },
+    "hardcoded_password": {
+      "searched": "password= 字面量（脱敏，只记位置）",
+      "hits": 0
+    },
+    "hardcoded_token": {
+      "searched": "api_key/secret/token= 字面量（脱敏）",
+      "hits": 0
+    },
+    "hardcoded_php_array": {
+      "searched": "PHP 数组凭据字面量（脱敏）",
+      "hits": 0
+    },
+    "private_key": {
+      "searched": "BEGIN PRIVATE KEY 块（脱敏）",
+      "hits": 0
+    }
+  },
+  "coverage": {
+    "files_by_lang": {},
+    "languages_with_short_rules": [
+      "php",
+      "java",
+      "js",
+      "py",
+      "go",
+      "rb",
+      "rs",
+      "c",
+      "cs",
+      "xml"
+    ],
+    "languages_without_rules": [],
+    "note": "没短规则的语言仍计入 files_scanned；本字段只表示没短规则，不是停工。没追完才写计划表 coverage_gap。",
+    "entry_zero_cross_check": {
+      "note": "入口键 hits=0 且该语言有文件才触发；mismatch=疑似规则盲区，郭嘉必须 grep 复核后记 coverage_gap",
+      "languages": {}
+    }
+  },
+  "sources": [],
+  "sinks": [],
+  "secret_candidates": [],
+  "items": [],
+  "notes": "郭嘉开局跑 scripts/auto_chain_scan.py。近距配对 + PHP 拼接流 + Python 函数内污染。MAX_ITEMS=2000。filter_nearby 只是邻近过滤词，不能顶曹冲。secret_candidates 脱敏，不能顶 close credential_scan。命中只是 candidate，禁止写 verified。不能顶 keyword-scan / js-collection / sink-runtime / CVE。engine/source_root 必须是源码 walker，禁止 swagger/菜单/链审 grep。"
+}

@@ -1,0 +1,10 @@
+{
+  "scans": {
+    "mybatis_dollar": {"searched": "mapper xml ${user-controlled table/column}", "hits": 0},
+    "class_for_name": {"searched": "Class.forName(request)", "hits": 0},
+    "exec": {"searched": "Runtime.exec / ProcessBuilder", "hits": 0},
+    "expression": {"searched": "SpEL / ScriptEngine / user template", "hits": 0},
+    "fastjson_user_entry": {"searched": "Fastjson autoType HTTP entry", "hits": 0}
+  },
+  "items": []
+}

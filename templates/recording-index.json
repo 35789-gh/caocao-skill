@@ -1,0 +1,18 @@
+{
+  "items": [
+    {
+      "chain_id": "<id>",
+      "video": "captures/complex-<id>.mp4",
+      "full_span": true,
+      "duration_sec": "<ffprobe 实测秒数——close 闸对账+13分钟上限判据用，缺键对账不执行（批二十五补键）>",
+      "required_shots": [
+        "<id>-login.png",
+        "<id>-step1-request.png",
+        "<id>-step2-effect.png"
+      ],
+      "_required_shots_note": "批六十一⑫（r38 G-05，RF-VID-05 每步截图对账）：录屏计划里列出的关键节点截图清单（登录+每关键步），close 逐项核文件在 run_root 真实存在——写了没拍=卷不完整；不写本键记 note（老账兼容），写了缺件 fail",
+      "from": "clean_precondition",
+      "to": "effect_confirmed"
+    }
+  ]
+}

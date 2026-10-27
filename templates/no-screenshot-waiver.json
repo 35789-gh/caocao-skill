@@ -1,0 +1,8 @@
+{
+  "_说明": "无图豁免件（RF-IMG-19，批四十七立/批五十三收紧）：**仅 website_only 纯远程目标**确不可达时才准用——材料/源码在场（local_source/source_and_website 或信封登记 material_source_path）无豁免资格，必须起服复现拍真实截图；确实起不来落 run/service-start-failure.json（模板认 templates/service-start-failure.json）。reason ≥20 字**且不同字符 ≥6**（同字堆砌=闸拦）写实理由+证据指针（nslookup/curl http_code=000 原件路径）；豁免只免图片义务不免其余证据义务；目标恢复可达后补拍出 -rev 卷。闸：不该豁免的场落了本件=豁免无效照拦；缺本件或 reason 不合格=close fail。",
+  "reason": "<≥20 字：为何本场无可拍图（不可达时给 nslookup/curl 原件指针；无表现面时说清接口形态）>",
+  "evidence": [
+    "<证据指针，如 run/unreachable-nslookup.txt、run/unreachable-curl.txt>"
+  ],
+  "declared_at": "<落件时间>"
+}

@@ -1,0 +1,47 @@
+{
+  "_说明": "finding 落盘照抄本件结构，别自由发挥。字段词表唯一出处 = scripts/hard_gate.py 的 check_verified_evidence（2026-10-08 手续改良）。铁三条：①结论键只用 status，禁写 verdict/verdict_now/result（闸不认）；②status=verified 必须带 evidence 数组，每项是 run_root 相对路径且真实存在（图要真图头，文本≥40字节）；③XSS 须含弹窗/渲染原图，RCE/命令执行类须含命令或文件执行落盘（截图不算），越权须含他者数据回包。铁四条（2026-10-09 判例）：SQL/注入类 verified 必须带 db_ground_truth 块——db_direct（mode+evidence 指库侧只读直查原件，含 mysql CLI 等客户端特征行）或 waiver（mode+reason≥10字+secondary_source）二选一；库通道在场只对种子/凭据文件比对 = 闸拦，不得 verified。落盘后跑：py scripts/check_finding.py 本件路径 --run-root 场根",
+  "chain_id": "RUN-XXX-01/CH-01",
+  "finding_type": "越权",
+  "evidence_loop_class": "<可选受控枚举（批三十七）：idór 用 idor；全集=auth_register|rce|command_injection|ssti|deserialization_rce|sqli|file_read|file_write|upload_exec|upload|xss_reflected|xss_stored|idor|ssrf|auth_bypass|info_leak|business_logic|deserialization——写了按它定 H-26 下限与证据配套，自由文本 finding_type 退居辅助；缺省走关键词兼容>",
+  "status": "verified",
+  "severity": "low",
+  "conclusion": "一句话拼接条件结论：谁、什么条件、能拿到什么",
+  "evidence": [
+    "06-yu-jin/evidence/ch01-step1-回包.json",
+    "06-yu-jin/evidence/ch01-step2-他者数据回包.json",
+    "run/captures/ch01-效果原图.png"
+  ],
+  "db_ground_truth": {
+    "_说明": "仅 SQL/注入类 verified 必填（闸机械拦）。声称拖出具体数据值：库通道可达必须 db_direct 直查比对；不可达走 waiver",
+    "mode": "db_direct",
+    "evidence": [
+      "06-yu-jin/evidence/chXX-db-ground-truth.txt"
+    ],
+    "compared_value": "拖出值与库中实值的一致性结论一句话",
+    "waiver替代写法": {
+      "mode": "waiver",
+      "reason": "纯黑盒无库通道/凭据不可得等≥10字原因",
+      "secondary_source": "出厂种子SQL|凭据账种子|第二接口回读|未拖具体值仅证机制",
+      "_note": "样例值按实际填：勿照抄 complex/high——会触发复杂链录屏义务与高危必录闸（2026-10-13 B6）"
+    },
+    "_note": "样例值按实际填：勿照抄 complex/high——会触发复杂链录屏义务与高危必录闸（2026-10-13 B6）"
+  },
+  "source": {
+    "file": "server/模块/SomeController.java",
+    "lines": "120-135",
+    "_note": "样例值按实际填：勿照抄 complex/high——会触发复杂链录屏义务与高危必录闸（2026-10-13 B6）"
+  },
+  "source_refs": [
+    {
+      "_说明": "仅白盒场 verified 必填（H-22 注毒检测，闸 check_finding_source_refs 机械拦，2026-10-15 批三十四）：对引用的每个源码出处文件用 py scripts/material_hash.py --file <文件> 算 sha256，file 写相对材料根路径；闸逐条对照开局 run/material-manifest.json——不在清单=场外/伪造出处，哈希不符=材料被中途改动、该链作废",
+      "file": "server/模块/SomeController.java",
+      "lines": "120-135",
+      "sha256": "<material_hash.py 算出的 64 位哈希，禁手抄>"
+    }
+  ],
+  "complexity": "simple",
+  "related_cve": "<可选：本 finding 与某公开 advisory/CVE 同族（another_face_new）时必填编号——填了就必须带 route_compare 数组（批三十九机械件）：advisory_route（公开 advisory 受影响路由原文 ≥4 字）× local_path（可解析）× local_line，行数≥1 闸机械核>",
+  "downgrade_reason": "<可选：判级低于 H-26 类型下限时必填且 ≥20 字（谁拍板、依据什么），并同句同步进 delivery-verdict levels 段——批三十五机械件双留痕；未降级删除本键>",
+  "verified_at": "2026-10-08T00:00:00+08:00",
+  "_note": "样例值按实际填：勿照抄 complex/high——会触发复杂链录屏义务与高危必录闸（2026-10-13 B6）"
+}

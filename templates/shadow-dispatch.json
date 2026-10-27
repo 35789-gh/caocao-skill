@@ -1,0 +1,20 @@
+{
+  "role": "cao-cao-shadow",
+  "agent_id": "agent_<uuid>",
+  "scope_ids": [
+    "report_layout"
+  ],
+  "duty_steps": [
+    "到场先交出卷判决 02-cao-cao-shadow/delivery-verdict.json（三段：levels 等级重判 / eliminations 剔除复验 / dedup 查重实查，各段带独立原件指针，回述型=视同未判决；levels 判 below_medium（实测够不上中危）的低危卷不出 DOCX，闭环事实留 finding JSON、处置进 eliminations；dedup 结论三选一 no_public_coverage/same_problem_covered/another_face_new，same_problem_covered 的卷要封存进 reports/discarded/ 并写 sealing-receipt，another_face_new 的正位卷要引编号声明差异——查了不执行 = close fail）；曹操逐点回应 02-cao-cao/shadow-verdict-response.json（accepted/rejected 带理由）之后才排版",
+    "出正式 8 块通报：标题、目标网站URL、等级、漏洞描述（我）、漏洞危害、涉及接口、复现、修复",
+    "每步双灰底普适（2026-10-09 晚标准格式）：每步请求包灰底 + 响应包灰底（拆开）；实测包，不要模板 UA；复现包不许脱敏；白盒场修复建议后加「源码依据」块（// 问题： 标注）；有利用成功画面的卷尾加「附图（本场实测截图）」段（编号图注、每张先过 vision_review.py 判 evidence_ok 才嵌）；finding 不写 run_id/target_identity/snapshot_id",
+    "禁止任何形式的汇总件顶卷（总结表、执行性概要、分档清单、预算台账、核对矩阵等都不得替代 8 块通报正位卷——具体禁词以 dispatch_check_lite 禁词表为准，本行措辞避开禁词免得模板自身过不了闸）",
+    "废稿移 reports/discarded/；8 块放 reports/ 正位，冲突进 reports/revisions/ 同时挪走废稿",
+    "卷结构九要素含「软件与厂商信息」块（软件名+版本+开源仓库/厂商+版本画面证据，2026-10-13 新标）"
+  ],
+  "expected_artifacts": [
+    "02-cao-cao-shadow/delivery-verdict.json",
+    "reports/<finding-title>.docx",
+    "reports/json/<finding-title>.json"
+  ]
+}

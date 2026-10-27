@@ -1,0 +1,23 @@
+{
+  "_说明": "曹操签字收口件样例（放 02-cao-cao/ 下）。结论键=status（闸兼容 finding_status/final_status 两个别名，三键语义一致；禁写 verdict/verdict_now/result——闸不认）；且闸扫的是全场所有 JSON——件内每个 status=verified 的条目同样必须带 evidence 数组（2026-10-08 手续改良，guns 场当晚真实踩过）。**签字摘录锚（批三十七，era≥20261015 硬核）**：件内必须引用被签 finding 的结论/描述原文 ≥15 连续字（下方案例的「核对摘录」键，照抄占位符必被 verify 拦——换成真账原文）；空壳签字按未签论处。**审卷回执（批六十四，era≥20261017 close 硬核）**：每份正位卷须配 `02-cao-cao/volume-review-<卷名>.json`（曹操五样目验回执，见 templates/volume-review.json），close 查「有正位卷必有 pass 回执且回执晚于卷」——分身交卷后曹操验卷，不合格打回分身重做，曹操不动手改正位（收口后禁区同款）。落盘后跑：py scripts/check_finding.py 本件路径 --run-root 场根（2026-10-13 G2 修：顶层 evidence 为必填——check_verified_evidence/check_finding 都查顶层；按本模板填全+真摘录即可过闸）",
+  "role": "cao-cao",
+  "status": "verified",
+  "signed_at": "2026-10-08T00:00:00+08:00",
+  "findings": [
+    {
+      "chain_id": "RUN-XXX-01/CH-01",
+      "status": "verified",
+      "severity": "high",
+      "evidence": [
+        "02-cao-cao/findings/ch01.json",
+        "06-yu-jin/evidence/ch01-step2-他者数据回包.json"
+      ],
+      "核对摘录": "<必填（era≥20261015）：从 02-cao-cao/findings/ch01.json 的结论/描述字段摘 ≥15 连续字原文——闸拿它和 reports/json/*.json 的 ≥20 字文本值做摘录比对，对不上=没读过账本",
+      "note": "一句话定级理由"
+    }
+  ],
+  "evidence": [
+    "02-cao-cao/findings/ch01.json",
+    "06-yu-jin/evidence/ch01-step2-他者数据回包.json"
+  ]
+}

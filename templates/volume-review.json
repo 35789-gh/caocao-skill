@@ -1,0 +1,26 @@
+{
+  "_comment": "volume-review-<卷名>.json（曹操验卷回执，批六十四）——分身交出正位卷后、close 之前，曹操五样目验逐卷落件。close 硬核（era≥20261017）：有正位卷必有本回执且 verdict=pass；回执 mtime 必须晚于被审卷 mtime（先审后改无效）；任何一项 fail=整卷打回分身重做（曹操不动手改正位——收口后禁区同款顶岗禁令）。五样：①复现一致（卷面写的链 vs 角色目录漏洞证据是同一个洞：marker/路由/回显值抽查比对）②九要素格式（RF-ELEM 全套+8 块+双灰底）③图表现力（外行看图能说出漏洞是什么、能干成什么——RF-IMG-01/09）④AI 味（RF-STYLE-02：空洞修饰/排比/每段拔高）⑤残留标记（内部角色名/占位符/模型名/账指针漏进卷——RF-DOC-09+RF-IMG-13）。verdict 三值：pass / reject（附 reject_items 必填）/ revised_out（卷已被 -rev 替代，指向新卷）。",
+  "role": "cao-cao",
+  "reviewed_volume": "reports/<卷名>.docx",
+  "reviewed_at": "<ISO 时间>",
+  "verdict": "pass",
+  "checks": {
+    "reproduction_consistency": {
+      "result": "pass",
+      "spot_checks": [
+        {"item": "marker/路由/关键值抽查项", "in_volume": "卷内写的值", "in_evidence": "角色目录证据里的值", "match": true}
+      ]
+    },
+    "nine_elements_format": {"result": "pass", "note": "九要素+双灰底+全角＃齐"},
+    "image_expressiveness": {
+      "result": "pass",
+      "per_image": [
+        {"image": "附图1", "layman_readable": true, "note": "外行能看出：未登录拿到 3 条手机号"}
+      ]
+    },
+    "ai_style": {"result": "pass", "note": "无空洞修饰/排比/拔高总结"},
+    "residual_markers": {"result": "pass", "note": "无内部角色名/占位符/模型名/账指针"}
+  },
+  "reject_items": [],
+  "note": "verdict=reject 时逐条写改哪（哪张图换/哪步重写/哪段删），分身重做后曹操复审重落本件"
+}

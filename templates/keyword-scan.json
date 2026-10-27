@@ -1,0 +1,17 @@
+{
+  "source_root": "<被扫描材料根绝对路径（批三十五深挖 27：闸把 items[].file 按此根解析，编造 file:line 拦）>",
+  "scans": {
+    "permit_all": {"searched": "source @PermitAll / permitAll customizer", "hits": 0},
+    "login_user_header": {"searched": "source login-user header parse / setLoginUser", "hits": 0},
+    "mock_secret": {"searched": "source mock-enable mock-secret mockLoginUser", "hits": 0},
+    "notify_url": {"searched": "source notifyUrl downloadBytes HttpUtil.createPost(url)", "hits": 0},
+    "mybatis_dollar": {"searched": "mapper xml ${user-controlled table/column}", "hits": 0},
+    "class_for_name": {"searched": "Class.forName(request)", "hits": 0},
+    "exec": {"searched": "Runtime.exec / ProcessBuilder", "hits": 0},
+    "expression": {"searched": "SpEL / ScriptEngine / user template", "hits": 0},
+    "upload_ext": {"searched": "upload originalFilename 无扩展名白名单", "hits": 0},
+    "third_party_coord": {"searched": "pom/package 第三方坐标+版本 jimureport/fastjson/flowable", "hits": 0}
+  },
+  "items": [],
+  "notes": "郭嘉开局源码 grep 入账。十个键名可沿用，searched 必须改成本栈等价词（PHP=$_GET/include $var；Go=http.Handle/os/exec；Python=request.args/os.system）。禁止写 swagger/api-docs/menu/链审。hits>=1 每条进 items（file:line）。不能顶 js-collection / auto-chain；危险 sink 还要 sink-runtime；第三方版本还要 CVE。"
+}

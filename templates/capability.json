@@ -1,0 +1,18 @@
+{
+  "capability_check_id": "CAP-<ROLE>-001",
+  "role": "<role>",
+  "image_read": "available|unavailable|unknown",
+  "screenshot_capture": "available|unavailable|unknown",
+  "video_capture": "available|unavailable|unknown",
+  "video_review": "available|unavailable|unknown",
+  "screenshot_capture_in_run": "available|unavailable",
+  "visual_capability": "available|unavailable|unknown",
+  "evidence_mode": "visual|mixed|cli_only",
+  "capability_source": "tool_table_and_skill_list",
+  "browser_skill_in_this_agent": false,
+  "browser_skill_main_agent_only": true,
+  "pending_visual_capture_items": [
+    "native captcha gate at http://127.0.0.1:PORT",
+    "login into admin at http://127.0.0.1:PORT"
+  ]
+}
